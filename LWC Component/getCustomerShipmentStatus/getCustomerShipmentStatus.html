@@ -1,0 +1,21 @@
+<template>
+<div style="height:50px;">
+     
+<div if:true={status} >
+  <div class="slds-float_left"><h4 style="font-size:20px;color: blue;"> Current Shipment Status :  {status}</h4>
+  </div>
+  <div class="slds-float_right">
+  <lightning-button
+            variant="neutral"
+            name="refresh"
+            onclick={refreshStatus}
+            label="Refresh Shipment Status">
+            </lightning-button>
+  </div>
+</div>
+<div if:true={error}>
+    <p> {error} please contact your admin</p>
+</div>
+
+</div>
+</template>
